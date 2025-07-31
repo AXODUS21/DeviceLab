@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Libre_Bodoni } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const LibreBodoni = Libre_Bodoni({
   display: "swap",
@@ -21,8 +22,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${LibreBodoni.className} antialiased`}
-      >
-        {children}
+      > 
+        <div className="">
+          <Navbar/>
+        </div>
+        <div className="">
+          {children}
+        </div>
       </body>
     </html>
   );

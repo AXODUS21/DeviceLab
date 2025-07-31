@@ -4,16 +4,13 @@
 
 }
 
-@theme inline {
-
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
-
+    background: black;
+    color: white;
   }
 }
 
-body {
-
+.nav-button{
+  @apply cursor-pointer
 }
