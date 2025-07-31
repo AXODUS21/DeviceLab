@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Libre_Bodoni } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import ModelView from "@/components/ModelView";
 
 const LibreBodoni = Libre_Bodoni({
   display: "swap",
@@ -26,7 +27,10 @@ export default function RootLayout({
         <div className="">
           <Navbar/>
         </div>
-        <div className="">
+        <div className="relative">
+          <div className="absolute w-full h-full -z-10 flex justify-center">
+            <ModelView/>
+          </div>
           {children}
         </div>
       </body>
