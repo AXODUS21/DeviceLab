@@ -1,34 +1,41 @@
 import { useGLTF, useTexture } from "@react-three/drei";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three"
 
 
+gsap.registerPlugin(ScrollTrigger);
 export default function Model(props : any) {
-
   const modelRef = useRef<THREE.Group>(null);
-
   const { nodes, materials } = useGLTF("/scenes/scene.glb");
   const texture = useTexture("/textures/yellow.png");
 
-  // Animate model on scroll
   useEffect(() => {
     if (!modelRef.current) return;
 
-    gsap.to(modelRef.current.rotation, {
-      y: Math.PI * 2, // full rotation
+    const proxy = document.querySelector("#scroll-proxy");
+    if (!proxy) return;
+
+    const tween = gsap.to(modelRef.current.rotation, {
+      y: Math.PI * 2,
       ease: "none",
       scrollTrigger: {
-        trigger: document.body,
+        trigger: proxy,
         start: "top top",
         end: "bottom bottom",
         scrub: true,
+        markers: false,
       },
     });
+
+    return () => {
+      tween.scrollTrigger?.kill();
+    };
   }, []);
 
   return (
-    <group {...props} dispose={null}>
+    <group ref={modelRef} {...props} dispose={null}>
       <mesh
         castShadow
         receiveShadow
