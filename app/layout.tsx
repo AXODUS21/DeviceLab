@@ -28,7 +28,7 @@ export default function RootLayout({
           <Navbar/>
         </div>
         <div className="relative">
-          <div className="absolute w-full h-full -z-10 flex justify-center">
+          <div className="fixed w-full h-full -z-10 flex justify-center">
             <ModelView/>
           </div>
           {children}

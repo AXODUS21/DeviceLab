@@ -1,11 +1,11 @@
-import ModelView from "@/components/ModelView";
+import Carousel from "@/pages/Carousel";
+import Hero from "@/pages/Hero";
 
 export default function Home() {
   return (
-    <div className="items-center flex justify-center min-h-screen relative">
-      <div className="flex flex-col items-center">
-        <h1 className="text-[250px] leading-none select-none">PEEKLET</h1>
-      </div>
-    </div>
+    <main>
+      <Hero/>
+      <Carousel/>
+    </main>
   );
 }

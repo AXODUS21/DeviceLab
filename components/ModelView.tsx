@@ -6,6 +6,9 @@ import { OrbitControls, Environment } from "@react-three/drei";
 import Model from "@/models/Iphone";
 
 const ModelView = () => {
+  
+
+
   return (
       <>
         <Canvas camera={{ position: [-80, 40, -60], fov: 3 }}>

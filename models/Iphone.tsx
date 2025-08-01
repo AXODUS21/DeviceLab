@@ -1,11 +1,32 @@
 import { useGLTF, useTexture } from "@react-three/drei";
-import React from "react";
+import gsap from "gsap";
+import React, { useEffect, useRef } from "react";
 import * as THREE from "three"
 
 
 export default function Model(props : any) {
+
+  const modelRef = useRef<THREE.Group>(null);
+
   const { nodes, materials } = useGLTF("/scenes/scene.glb");
   const texture = useTexture("/textures/yellow.png");
+
+  // Animate model on scroll
+  useEffect(() => {
+    if (!modelRef.current) return;
+
+    gsap.to(modelRef.current.rotation, {
+      y: Math.PI * 2, // full rotation
+      ease: "none",
+      scrollTrigger: {
+        trigger: document.body,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    });
+  }, []);
+
   return (
     <group {...props} dispose={null}>
       <mesh
