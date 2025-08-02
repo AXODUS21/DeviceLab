@@ -16,23 +16,26 @@ export default function Model(props : any) {
     const proxy = document.querySelector("#scroll-proxy");
     if (!modelRef.current || !proxy) return;
 
-    const tween = gsap.to(modelRef.current.rotation, {
-      y: Math.PI * 2,
-      ease: "none",
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: proxy,
         start: "top top",
-        end: "bottom bottom",
+        end: "bottom top",
         scrub: true,
-        markers: false,
+        pin: true, // <- Pin the section during animation
+        markers: true,
       },
     });
 
+    tl.to(modelRef.current.rotation, {
+      y: Math.PI * 2,
+      ease: "none",
+    });
+
     return () => {
-      tween.scrollTrigger?.kill();
+      tl.scrollTrigger?.kill();
     };
   }, []);
-
 
   return (
     <group ref={modelRef} {...props} dispose={null}>

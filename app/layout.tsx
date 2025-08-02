@@ -21,18 +21,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${LibreBodoni.className} antialiased`}
-      > 
+      <body className={`${LibreBodoni.className} antialiased`}>
         <div className="">
-          <Navbar/>
+          <Navbar />
         </div>
         <div className="relative">
-          <div className="fixed w-full h-full -z-10 flex justify-center">
-            <ModelView/>
+          <div id="scroll-proxy" className="w-full h-[300vh]">
+            <div className="h-screen flex items-center justify-center">
+              <ModelView />
+            </div>
           </div>
-          <div id="scroll-proxy" className="w-full">
-              {children}
+          {children}
+
+          <div className="h-screen bg-white flex items-center justify-center">
+            <p className="text-4xl">Next section content</p>
           </div>
         </div>
       </body>

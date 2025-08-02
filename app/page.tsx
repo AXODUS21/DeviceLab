@@ -6,10 +6,10 @@ import Hero from "@/pages/Hero";
 export default function Home() {
   return (
     <main>
-      <Hero/>
-      <Content1/>
-      <Content2/>
-      <Carousel/>
+      <Hero />
+      <Content1 />
+      <Content2 />
+      <Carousel />
     </main>
   );
 }
