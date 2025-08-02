@@ -3,7 +3,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className="fixed left-0 right-0 px-5 py-3">
+    <div className="fixed left-0 right-0 px-5 py-3 backdrop-blur-xs bg-transparent z-50">
       <div className="flex gap-5 items-center justify-between">
         <div className="flex gap-2 items-center">
             <Image

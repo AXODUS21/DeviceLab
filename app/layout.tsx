@@ -31,7 +31,7 @@ export default function RootLayout({
           <div className="fixed w-full h-full -z-10 flex justify-center">
             <ModelView/>
           </div>
-          <div id="scroll-proxy" className="min-h-[300vh] w-full">
+          <div id="scroll-proxy" className="w-full">
               {children}
           </div>
         </div>
