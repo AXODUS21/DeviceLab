@@ -26,12 +26,15 @@ export default function RootLayout({
           <Navbar />
         </div>
         <div className="relative">
-          <div id="scroll-proxy" className="w-full h-[300vh]">
-            <div className="h-screen flex items-center justify-center">
+          <div id="scroll-proxy" className="w-full absolute h-[300vh]">
+            <div className="h-screen flex items-center justify-center relative">
               <ModelView />
             </div>
           </div>
-          {children}
+          
+          <div className="">
+            {children}
+          </div>
 
           <div className="h-screen bg-white flex items-center justify-center">
             <p className="text-4xl">Next section content</p>
