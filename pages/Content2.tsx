@@ -23,7 +23,7 @@ const Content2 = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: textRef.current,
-          start: "center bottom",
+          start: "top bottom",
           toggleActions: "play none none none",
           once: true,
         },

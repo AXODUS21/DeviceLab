@@ -35,9 +35,9 @@ export default function RootLayout({
           <div className="">
             {children}
           </div>
-
-          <div className="h-screen bg-white flex items-center justify-center">
-            <p className="text-4xl">Next section content</p>
+          
+          <div className="bg-white min-h-50 absolute bottom-0 w-full">
+            hello
           </div>
         </div>
       </body>

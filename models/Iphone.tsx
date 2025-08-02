@@ -22,7 +22,7 @@ export default function Model(props : any) {
         start: "top top",
         end: "bottom top",
         scrub: true,
-        pin: true, // <- Pin the section during animation
+        pin: true,
         markers: true,
       },
     });
