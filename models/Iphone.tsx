@@ -9,7 +9,7 @@ import * as THREE from "three"
 gsap.registerPlugin(ScrollTrigger);
 export default function Model(props : any) {
   const modelRef = useRef<THREE.Group>(null);
-  const { nodes, materials } = useGLTF("/scenes/scene.glb");
+  const { nodes, materials } = useGLTF("/scenes/iphone.glb");
   const texture = useTexture("/textures/yellow.png");
 
   useGSAP(() => {
@@ -261,4 +261,4 @@ export default function Model(props : any) {
   );
 }
 
-useGLTF.preload("/scenes/scene.glb");
+useGLTF.preload("/scenes/iphone.glb");

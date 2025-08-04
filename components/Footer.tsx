@@ -3,10 +3,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className="px-5 py-10 pb-5">
+    <div className="px-15 py-10 pb-5">
       <div className="flex justify-around pb-5 border-b border-white/50">
         <div className="space-y-10">
-          <div className="">
+          <div className="flex items-center">
             <Image
               src={"/img/logo.svg"}
               alt="logo"
@@ -14,9 +14,12 @@ const Footer = () => {
               height={50}
               width={50}
             />
+            <p className='text-lg pt-1'>
+              Peeklet
+            </p>
           </div>
           <p className="max-w-xl">
-            Peekly is a Chrome and Firefox extension that allows you to easily
+            Peeklet is a Chrome and Firefox extension that allows you to easily
             simulate a phone or tablet in a very realistic way with just one
             click. It's very useful for testing a website, taking beautiful
             screenshots or videos for presentations or emails, doing customer
@@ -24,21 +27,25 @@ const Footer = () => {
           </p>
         </div>
         <div className=""></div>
-        <div className="grid">
+        <div className="flex flex-col items-start gap-5">
           <h2>Company</h2>
           <button>About</button>
           <button>Legal notices</button>
-          <button>Personal data</button>
+          <button>Privacy policy</button>
+          <button>Linkedin</button>
+          <button>Contact us</button>
         </div>
-        <div className="grid">
+        <div className="flex flex-col items-start gap-5">
           <h2>Products</h2>
-          <button>About</button>
-          <button>Legal notices</button>
-          <button>Personal data</button>
+          <button>Chrome extension</button>
+          <button>Firefox extension</button>
+          <button>HD Mockups</button>
+          <button>Blog</button>
+          <button>Support</button>
         </div>
       </div>
-      <div className="py-2 px-5">
-        <div>
+      <div className="py-2">
+        <div className="text-xs">
           © 2021 Mobile FIRST | This site is protected by reCAPTCHA and the
           Google <a href="">Privacy Policy</a> and{" "}
           <a href="">Terms of Service</a> apply

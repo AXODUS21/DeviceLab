@@ -4,6 +4,7 @@ import React from 'react'
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment } from "@react-three/drei";
 import Model from "@/models/Iphone";
+import { Macbook } from '@/models/Macbook';
 
 const ModelView = () => {
   
@@ -19,7 +20,7 @@ const ModelView = () => {
             minDistance={0.5}
             maxDistance={5}
           />
-          <Model />
+          <Model/>
         </Canvas>
       </>
   );
