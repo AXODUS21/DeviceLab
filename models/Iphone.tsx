@@ -23,7 +23,6 @@ export default function Model(props : any) {
         end: "bottom top",
         scrub: true,
         pin: true,
-        markers: true,
       },
     });
 

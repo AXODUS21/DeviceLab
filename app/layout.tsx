@@ -3,6 +3,7 @@ import { Libre_Bodoni } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ModelView from "@/components/ModelView";
+import Footer from "@/components/Footer";
 
 const LibreBodoni = Libre_Bodoni({
   display: "swap",
@@ -36,8 +37,8 @@ export default function RootLayout({
             {children}
           </div>
           
-          <div className="bg-gray-500 min-h-50 w-full">
-              hello
+          <div className="bg-gray-800/60 w-full">
+              <Footer/>
           </div>
         </div>
       </body>
