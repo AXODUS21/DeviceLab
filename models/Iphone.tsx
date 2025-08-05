@@ -1,17 +1,20 @@
 "use client"
+import { useLoaderStore } from "@/components/Loader";
 import { useGSAP } from "@gsap/react";
 import { useGLTF, useTexture } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three"
-
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Model(props : any) {
   const modelRef = useRef<THREE.Group>(null);
   const { nodes, materials } = useGLTF("/scenes/iphone.glb");
   const texture = useTexture("/textures/yellow.png");
+  const [hasRendered, setHasRendered] = useState(false);
+  const setLoading = useLoaderStore((s) => s.setLoading);
 
   useGSAP(() => {
     const proxy = document.querySelector("#scroll-proxy");
@@ -36,6 +39,19 @@ export default function Model(props : any) {
       tl.scrollTrigger?.kill();
     };
   }, []);
+
+
+  useEffect(() => {
+    setLoading(true);
+  }, []);
+
+  useFrame(() => {
+    if (modelRef.current && !hasRendered) {
+      setHasRendered(true);
+      setLoading(false);
+    }
+  });
+
 
   return (
     <group ref={modelRef} {...props} dispose={null}>

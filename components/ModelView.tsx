@@ -1,16 +1,20 @@
-"use client"
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Environment } from "@react-three/drei";
-import { CarouselState, useCarouselStore } from "@/pages/Carousel";
+"use client";
 
-export default function ModelView({
+import { Canvas } from "@react-three/fiber";
+import {
+  OrbitControls,
+  Environment,
+} from "@react-three/drei";
+import { useCarouselStore } from "@/pages/Carousel"; // Ensure this is client-side
+
+function Scene({
   position,
   fov,
 }: {
   position: [number, number, number];
   fov: number;
 }) {
-  const model = useCarouselStore((state: CarouselState) => state.currentModel);
+  const model = useCarouselStore((state) => state.currentModel);
 
   return (
     <Canvas camera={{ position, fov }}>
@@ -21,4 +25,14 @@ export default function ModelView({
       {model}
     </Canvas>
   );
+}
+
+export default function ModelView({
+  position,
+  fov,
+}: {
+  position: [number, number, number];
+  fov: number;
+}) {
+  return <Scene position={position} fov={fov} />;
 }

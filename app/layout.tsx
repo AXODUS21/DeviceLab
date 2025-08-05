@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ModelView from "@/components/ModelView";
 import Footer from "@/components/Footer";
+import Loader from "@/components/Loader";
 
 const LibreBodoni = Libre_Bodoni({
   display: "swap",
@@ -23,17 +24,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${LibreBodoni.className} antialiased`}>
-        <div className="">
+        <div className="z-[999]">
+          <Loader/>
+        </div>
+        <div>
           <Navbar />
         </div>
         <div className="relative h-fit overflow-hidden">
           <div id="scroll-proxy" className="w-fit absolute h-[300vh] flex">
             <div className="h-screen w-screen flex items-center justify-center relative">
-              <ModelView position={[-80, 40, -60]} fov={5} />
+                <ModelView position={[-80, 40, -60]} fov={5} />
             </div>
           </div>
 
-          <div className="">{children}</div>
+          
+          {children}
 
           <div className="bg-gray-800/60 w-full">
             <Footer />

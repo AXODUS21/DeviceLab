@@ -38,10 +38,10 @@ const Carousel = () => {
   return (
     <div>
       <div className="min-h-screen flex justify-around items-center">
-        <button className="z-[99]" onClick={moveLeft}>
+        <button className="z-30" onClick={moveLeft}>
           <ChevronLeft size={80} />
         </button>
-        <button className="z-[99]" onClick={moveRight}>
+        <button className="z-30" onClick={moveRight}>
           <ChevronRight size={80} />
         </button>
       </div>
