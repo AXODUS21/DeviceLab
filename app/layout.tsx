@@ -27,18 +27,16 @@ export default function RootLayout({
           <Navbar />
         </div>
         <div className="relative h-fit overflow-hidden">
-          <div id="scroll-proxy" className="w-full absolute h-[300vh]">
-            <div className="h-screen flex items-center justify-center relative">
-              <ModelView />
+          <div id="scroll-proxy" className="w-fit absolute h-[300vh] flex">
+            <div className="h-screen w-screen flex items-center justify-center relative">
+              <ModelView position={[-80, 40, -60]} fov={5} />
             </div>
           </div>
-          
-          <div className="">
-            {children}
-          </div>
-          
+
+          <div className="">{children}</div>
+
           <div className="bg-gray-800/60 w-full">
-              <Footer/>
+            <Footer />
           </div>
         </div>
       </body>

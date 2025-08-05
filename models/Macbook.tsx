@@ -6,18 +6,20 @@ export function Macbook(props : any) {
   const { nodes, materials } = useGLTF("scenes/macbook_pro.glb");
   return (
     <group {...props} dispose={null}>
-      <group position={[0.121, 0.007, 0]}>
+      <group position={[1, 0.007, 0]}>
         <mesh
           castShadow
           receiveShadow
           geometry={(nodes.Object_6 as THREE.Mesh).geometry}
           material={materials.MacBookPro}
+          scale={10}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={(nodes.Object_8 as THREE.Mesh).geometry}
           material={materials.MacBookPro}
+          scale={10}
         />
       </group>
       <mesh
@@ -25,6 +27,7 @@ export function Macbook(props : any) {
         receiveShadow
         geometry={(nodes.Object_4 as THREE.Mesh).geometry}
         material={materials.MacBookPro}
+        scale={10}
       />
     </group>
   );
