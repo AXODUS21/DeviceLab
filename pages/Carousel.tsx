@@ -8,7 +8,6 @@ import DownloadButton from "@/components/DownloadButton";
 export const modelArr = [
   { id: 0, model: <Model /> },
   { id: 1, model: <Macbook /> },
-  { id: 2, model: <Model /> },
 ];
 
 export type CarouselState = {

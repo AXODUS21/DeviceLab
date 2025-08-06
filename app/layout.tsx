@@ -33,6 +33,7 @@ export default function RootLayout({
         <div className="relative h-fit overflow-hidden">
           <div id="scroll-proxy" className="w-fit absolute h-[300vh] flex">
             <div className="h-screen w-screen flex items-center justify-center relative">
+              
                 <ModelView position={[-80, 40, -60]} fov={5} />
             </div>
           </div>
