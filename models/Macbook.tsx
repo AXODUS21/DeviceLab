@@ -50,7 +50,7 @@ export function Macbook(props : any) {
           material={materials.MacBookPro}
           scale={11}
         />
-        <meshStandardMaterial roughness={1} map={texture} /> {/*Doesnt work yet */}
+        <meshStandardMaterial roughness={1} map={texture} /> {/*! have to put this inside a mesh tag that actually has a screen mesh (bad model rn so it wont work) */}
       </group>
       <mesh
         castShadow
