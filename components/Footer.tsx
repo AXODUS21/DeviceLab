@@ -8,22 +8,19 @@ const Footer = () => {
         <div className="space-y-10">
           <div className="flex items-center">
             <Image
-              src={"/img/logo.svg"}
+              src={"/img/logo.png"}
               alt="logo"
               className="h-10 w-10"
               height={50}
               width={50}
             />
-            <p className='text-lg pt-1'>
-              Peeklet
-            </p>
+            <p className="text-lg pt-1">DeviceLab</p>
           </div>
           <p className="max-w-xl">
-            Peeklet is a Chrome and Firefox extension that allows you to easily
-            simulate a phone or tablet in a very realistic way with just one
-            click. It's very useful for testing a website, taking beautiful
-            screenshots or videos for presentations or emails, doing customer
-            demos, etc.
+            DeviceLab is a powerful browser extension built for developers,
+            designers, and product teams who care about delivering flawless user
+            experiences. With just one click, you can preview any website on
+            multiple devices and screen sizes without leaving your browser.
           </p>
         </div>
         <div className=""></div>
