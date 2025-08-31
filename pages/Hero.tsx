@@ -1,8 +1,6 @@
 import React from 'react'
 
-type Props = {}
-
-const Hero = (props: Props) => {
+const Hero = () => {
   return (
     <div className="items-center flex justify-center min-h-screen relative">
       <div className="">
