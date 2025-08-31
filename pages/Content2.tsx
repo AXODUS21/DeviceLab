@@ -13,12 +13,12 @@ const Content2 = () => {
         enableBlur={true}
         baseRotation={5}
         blurStrength={10}
-        textClassName='text-3xl'
-        containerClassName='w-1/3'
-      > 
-          The different models of phones and tablets allow you to test your
-          responsive site on different resolutions. Change the device in
-          one click really simple, fast and effective.
+        textClassName="text-3xl"
+        containerClassName="w-1/3"
+      >
+        Testing responsiveness has never been easier. Simply choose a device
+        model and watch your site adjust in real time—fast, simple, and
+        effective.
       </ScrollReveal>
     </div>
   );
